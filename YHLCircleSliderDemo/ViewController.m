@@ -33,10 +33,10 @@
     _otCircleSlider2.minValue = 0;
     _otCircleSlider1.maxValue = 365;
     _otCircleSlider2.maxValue = 365;
-    _otCircleSlider1.startAngle = 0;
-    _otCircleSlider2.startAngle = 0;
-    _otCircleSlider1.endAngle = 360;
-    _otCircleSlider2.endAngle = 360;
+    _otCircleSlider1.startAngle = 120;
+    _otCircleSlider2.startAngle = 120;
+    _otCircleSlider1.endAngle = 60;
+    _otCircleSlider2.endAngle = 60;
     _otCircleSlider2.sliderRadius = 10;
     _otCircleSlider2.sliderRadius = 0;
     _otCircleSlider1.enableCustom = YES;

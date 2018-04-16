@@ -226,7 +226,7 @@
 }
 
 - (void)setEndAngle:(uint)endAngle {
-    _endAngle = (endAngle - _startAngle) % 360 + _startAngle;
+    _endAngle = ((int)endAngle - (int)_startAngle) % 360 + _startAngle;
     if (_endAngle <= _startAngle) {
         _endAngle += 360;
     }

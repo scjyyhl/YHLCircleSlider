@@ -17,6 +17,7 @@
 		3AFF2D96208446CD0092350A /* YHLCircleSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFF2D8F208446CD0092350A /* YHLCircleSlider.framework */; };
 		3AFF2D97208446CD0092350A /* YHLCircleSlider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFF2D8F208446CD0092350A /* YHLCircleSlider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3AFF2D9D208446FC0092350A /* YHLCircleSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF2D9C208446FC0092350A /* YHLCircleSlider.m */; };
+		3AFF2D9F20847F6A0092350A /* YHLCircleSlider.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF2D9E20847F6A0092350A /* YHLCircleSlider.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		3AFF2D91208446CD0092350A /* YHLCircleSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHLCircleSlider.h; sourceTree = "<group>"; };
 		3AFF2D92208446CD0092350A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AFF2D9C208446FC0092350A /* YHLCircleSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHLCircleSlider.m; sourceTree = "<group>"; };
+		3AFF2D9E20847F6A0092350A /* YHLCircleSlider.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YHLCircleSlider.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		3A5CE8E12080959D00A3B672 = {
 			isa = PBXGroup;
 			children = (
+				3AFF2D9E20847F6A0092350A /* YHLCircleSlider.podspec */,
 				3A5CE8EC2080959D00A3B672 /* YHLCircleSliderDemo */,
 				3AFF2D90208446CD0092350A /* YHLCircleSlider */,
 				3A5CE8EB2080959D00A3B672 /* Products */,
@@ -227,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AFF2D9F20847F6A0092350A /* YHLCircleSlider.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
