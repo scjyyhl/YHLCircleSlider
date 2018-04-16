@@ -7,8 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "YHLCircleSlider.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *otLabel;
+@property (weak, nonatomic) IBOutlet UISlider *otSlider;
+@property (weak, nonatomic) IBOutlet YHLCircleSlider *otCircleSlider1;
+@property (weak, nonatomic) IBOutlet YHLCircleSlider *otCircleSlider2;
 
 @end
 
@@ -17,6 +23,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    _otSlider.minimumValue = 0;
+    _otSlider.maximumValue = 365;
+    [_otSlider addTarget:self action:@selector(actSliderValueChange:) forControlEvents:UIControlEventValueChanged];
+    
+    _otCircleSlider1.sliderImage = [UIImage imageNamed:@"icon_slider"];
+    _otCircleSlider1.minValue = 0;
+    _otCircleSlider2.minValue = 0;
+    _otCircleSlider1.maxValue = 365;
+    _otCircleSlider2.maxValue = 365;
+    _otCircleSlider1.startAngle = 0;
+    _otCircleSlider2.startAngle = 0;
+    _otCircleSlider1.endAngle = 360;
+    _otCircleSlider2.endAngle = 360;
+    _otCircleSlider2.sliderRadius = 10;
+    _otCircleSlider2.sliderRadius = 0;
+    _otCircleSlider1.enableCustom = YES;
+    
+    _otCircleSlider1.progressChange = ^(YHLCircleSlider *circleView, int currentNum) {
+        _otSlider.value = currentNum;
+        _otCircleSlider2.value = currentNum;
+        _otLabel.text = [NSString stringWithFormat:@"%d", currentNum];
+    };
 }
 
 
@@ -25,5 +54,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)actSliderValueChange:(UISlider *)slider {
+    float value = slider.value;
+    _otLabel.text = [NSString stringWithFormat:@"%f", value];
+    _otCircleSlider1.value = value;
+    _otCircleSlider2.value = value;
+}
 
 @end

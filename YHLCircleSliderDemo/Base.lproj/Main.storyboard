@@ -1,21 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Wm-v3-Kv1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mnp-Qg-Fyk"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNW-Ic-Gkg" customClass="YHLCircleSlider">
+                                <rect key="frame" x="20" y="220" width="335" height="188.5"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hRy-NV-0pA">
+                                <rect key="frame" x="18" y="146" width="339" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="yRj-4K-an3"/>
+                                </constraints>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIt-wC-h95">
+                                <rect key="frame" x="20" y="68" width="335" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="l0X-FT-IqL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYL-Zz-pmd" customClass="YHLCircleSlider">
+                                <rect key="frame" x="20" y="443.5" width="335" height="188.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="JNW-Ic-Gkg" firstAttribute="trailing" secondItem="JIt-wC-h95" secondAttribute="trailing" id="0Li-Z7-rs0"/>
+                            <constraint firstItem="JIt-wC-h95" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="IC1-uX-aWu"/>
+                            <constraint firstItem="hRy-NV-0pA" firstAttribute="leading" secondItem="JIt-wC-h95" secondAttribute="leading" id="ICA-gU-dL7"/>
+                            <constraint firstItem="hRy-NV-0pA" firstAttribute="trailing" secondItem="JIt-wC-h95" secondAttribute="trailing" id="Iej-zQ-tZ3"/>
+                            <constraint firstItem="hRy-NV-0pA" firstAttribute="top" secondItem="JIt-wC-h95" secondAttribute="bottom" constant="45" id="O1b-oV-1sw"/>
+                            <constraint firstItem="SYL-Zz-pmd" firstAttribute="top" secondItem="JNW-Ic-Gkg" secondAttribute="bottom" constant="35" id="OVG-Bm-cn9"/>
+                            <constraint firstItem="SYL-Zz-pmd" firstAttribute="leading" secondItem="JIt-wC-h95" secondAttribute="leading" id="S2Y-pO-AEM"/>
+                            <constraint firstAttribute="trailing" secondItem="JIt-wC-h95" secondAttribute="trailing" constant="20" id="TTR-sn-kfh"/>
+                            <constraint firstItem="JNW-Ic-Gkg" firstAttribute="top" secondItem="hRy-NV-0pA" secondAttribute="bottom" constant="45" id="Zen-hW-TTR"/>
+                            <constraint firstItem="SYL-Zz-pmd" firstAttribute="trailing" secondItem="JIt-wC-h95" secondAttribute="trailing" id="cWX-3q-2pL"/>
+                            <constraint firstItem="Mnp-Qg-Fyk" firstAttribute="top" secondItem="SYL-Zz-pmd" secondAttribute="bottom" constant="35" id="fg0-7P-037"/>
+                            <constraint firstItem="JNW-Ic-Gkg" firstAttribute="leading" secondItem="JIt-wC-h95" secondAttribute="leading" id="gu4-O1-TKP"/>
+                            <constraint firstItem="JIt-wC-h95" firstAttribute="top" secondItem="0Wm-v3-Kv1" secondAttribute="bottom" constant="48" id="mVz-kq-346"/>
+                            <constraint firstItem="SYL-Zz-pmd" firstAttribute="height" secondItem="JNW-Ic-Gkg" secondAttribute="height" id="mpf-5H-xAW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="otCircleSlider1" destination="JNW-Ic-Gkg" id="DO0-bP-por"/>
+                        <outlet property="otCircleSlider2" destination="SYL-Zz-pmd" id="XIm-G4-RPU"/>
+                        <outlet property="otLabel" destination="JIt-wC-h95" id="ZF5-Cr-SeE"/>
+                        <outlet property="otSlider" destination="hRy-NV-0pA" id="L4i-Ie-qt9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

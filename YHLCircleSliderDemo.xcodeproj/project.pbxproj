@@ -13,7 +13,35 @@
 		3A5CE8F72080959D00A3B672 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A5CE8F62080959D00A3B672 /* Assets.xcassets */; };
 		3A5CE8FA2080959D00A3B672 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5CE8F82080959D00A3B672 /* LaunchScreen.storyboard */; };
 		3A5CE8FD2080959D00A3B672 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CE8FC2080959D00A3B672 /* main.m */; };
+		3AFF2D93208446CD0092350A /* YHLCircleSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AFF2D91208446CD0092350A /* YHLCircleSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AFF2D96208446CD0092350A /* YHLCircleSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFF2D8F208446CD0092350A /* YHLCircleSlider.framework */; };
+		3AFF2D97208446CD0092350A /* YHLCircleSlider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFF2D8F208446CD0092350A /* YHLCircleSlider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3AFF2D9D208446FC0092350A /* YHLCircleSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF2D9C208446FC0092350A /* YHLCircleSlider.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AFF2D94208446CD0092350A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A5CE8E22080959D00A3B672 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AFF2D8E208446CD0092350A;
+			remoteInfo = YHLCircleSlider;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3AFF2D9B208446CD0092350A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3AFF2D97208446CD0092350A /* YHLCircleSlider.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3A5CE8EA2080959D00A3B672 /* YHLCircleSliderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHLCircleSliderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +54,22 @@
 		3A5CE8F92080959D00A3B672 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A5CE8FB2080959D00A3B672 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A5CE8FC2080959D00A3B672 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3AFF2D8F208446CD0092350A /* YHLCircleSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YHLCircleSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AFF2D91208446CD0092350A /* YHLCircleSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHLCircleSlider.h; sourceTree = "<group>"; };
+		3AFF2D92208446CD0092350A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AFF2D9C208446FC0092350A /* YHLCircleSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHLCircleSlider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3A5CE8E72080959D00A3B672 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AFF2D96208446CD0092350A /* YHLCircleSlider.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AFF2D8B208446CD0092350A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				3A5CE8EC2080959D00A3B672 /* YHLCircleSliderDemo */,
+				3AFF2D90208446CD0092350A /* YHLCircleSlider */,
 				3A5CE8EB2080959D00A3B672 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				3A5CE8EA2080959D00A3B672 /* YHLCircleSliderDemo.app */,
+				3AFF2D8F208446CD0092350A /* YHLCircleSlider.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,7 +113,28 @@
 			path = YHLCircleSliderDemo;
 			sourceTree = "<group>";
 		};
+		3AFF2D90208446CD0092350A /* YHLCircleSlider */ = {
+			isa = PBXGroup;
+			children = (
+				3AFF2D91208446CD0092350A /* YHLCircleSlider.h */,
+				3AFF2D9C208446FC0092350A /* YHLCircleSlider.m */,
+				3AFF2D92208446CD0092350A /* Info.plist */,
+			);
+			path = YHLCircleSlider;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3AFF2D8C208446CD0092350A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AFF2D93208446CD0092350A /* YHLCircleSlider.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		3A5CE8E92080959D00A3B672 /* YHLCircleSliderDemo */ = {
@@ -81,15 +144,35 @@
 				3A5CE8E62080959D00A3B672 /* Sources */,
 				3A5CE8E72080959D00A3B672 /* Frameworks */,
 				3A5CE8E82080959D00A3B672 /* Resources */,
+				3AFF2D9B208446CD0092350A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3AFF2D95208446CD0092350A /* PBXTargetDependency */,
 			);
 			name = YHLCircleSliderDemo;
 			productName = YHLCircleSliderDemo;
 			productReference = 3A5CE8EA2080959D00A3B672 /* YHLCircleSliderDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3AFF2D8E208446CD0092350A /* YHLCircleSlider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AFF2D9A208446CD0092350A /* Build configuration list for PBXNativeTarget "YHLCircleSlider" */;
+			buildPhases = (
+				3AFF2D8A208446CD0092350A /* Sources */,
+				3AFF2D8B208446CD0092350A /* Frameworks */,
+				3AFF2D8C208446CD0092350A /* Headers */,
+				3AFF2D8D208446CD0092350A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YHLCircleSlider;
+			productName = YHLCircleSlider;
+			productReference = 3AFF2D8F208446CD0092350A /* YHLCircleSlider.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -101,6 +184,10 @@
 				ORGANIZATIONNAME = com.dragonlis;
 				TargetAttributes = {
 					3A5CE8E92080959D00A3B672 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					3AFF2D8E208446CD0092350A = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -120,6 +207,7 @@
 			projectRoot = "";
 			targets = (
 				3A5CE8E92080959D00A3B672 /* YHLCircleSliderDemo */,
+				3AFF2D8E208446CD0092350A /* YHLCircleSlider */,
 			);
 		};
 /* End PBXProject section */
@@ -132,6 +220,13 @@
 				3A5CE8FA2080959D00A3B672 /* LaunchScreen.storyboard in Resources */,
 				3A5CE8F72080959D00A3B672 /* Assets.xcassets in Resources */,
 				3A5CE8F52080959D00A3B672 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AFF2D8D208446CD0092350A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +243,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AFF2D8A208446CD0092350A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AFF2D9D208446FC0092350A /* YHLCircleSlider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AFF2D95208446CD0092350A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AFF2D8E208446CD0092350A /* YHLCircleSlider */;
+			targetProxy = 3AFF2D94208446CD0092350A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3A5CE8F32080959D00A3B672 /* Main.storyboard */ = {
@@ -281,6 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E7WCZQXL95;
 				INFOPLIST_FILE = YHLCircleSliderDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragonlis.YHLCircleSliderDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,10 +407,59 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E7WCZQXL95;
 				INFOPLIST_FILE = YHLCircleSliderDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragonlis.YHLCircleSliderDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3AFF2D98208446CD0092350A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = E7WCZQXL95;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YHLCircleSlider/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dragonlis.YHLCircleSlider;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3AFF2D99208446CD0092350A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = E7WCZQXL95;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YHLCircleSlider/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dragonlis.YHLCircleSlider;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -319,6 +480,15 @@
 			buildConfigurations = (
 				3A5CE9012080959D00A3B672 /* Debug */,
 				3A5CE9022080959D00A3B672 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AFF2D9A208446CD0092350A /* Build configuration list for PBXNativeTarget "YHLCircleSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AFF2D98208446CD0092350A /* Debug */,
+				3AFF2D99208446CD0092350A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
