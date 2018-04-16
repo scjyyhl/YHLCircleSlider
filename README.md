@@ -8,6 +8,6 @@
 
 2. cocoaPod引用
 
-    pod 'YHLCircleSlider'
+    pod 'YHLCircleSlider', :git => 'https://github.com/scjyyhl/YHLCircleSlider.git'
 
 在swift中使用，需要在Bridging-Header.h文件中添加头文件YHLCircleSlider.h，并且在swift文件中import YHLCircleSlider
