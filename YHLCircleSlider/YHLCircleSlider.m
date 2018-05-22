@@ -33,7 +33,8 @@
 @property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
 /// 滑动的最后一个度数值，用户辅助判断滑动方向
 @property (assign, nonatomic) double lastAngle;
-
+/// 手指松开时要执行的操作
+@property (strong, nonatomic) void(^touchUpActionHanlde)(YHLCircleSlider *circleView, int currentNum);
 @end
 
 @implementation YHLCircleSlider
@@ -191,6 +192,9 @@
     if (value > _maxValue) {
         value = _maxValue;
     }
+    if (_value == value) {
+        return;
+    }
     _value = value;
     
     CGFloat perc = ((CGFloat)value - _minValue) / (_maxValue - _minValue);
@@ -264,8 +268,22 @@
     [self createArcPath];
 }
 
+#pragma mark -public method
+- (void)addActionWhenTouchUp:(void (^)(YHLCircleSlider *, int))action {
+    _touchUpActionHanlde = action;
+}
+
 #pragma mark - 拖动手势处理
 - (void)handlePan:(UIPanGestureRecognizer *)pv {
+    if (pv.state == UIGestureRecognizerStateEnded ||
+        pv.state == UIGestureRecognizerStateFailed ||
+        pv.state == UIGestureRecognizerStateCancelled) {
+        if (_touchUpActionHanlde) {
+            _touchUpActionHanlde(self, _value);
+        }
+        return;
+    }
+    
     CGPoint translation = [pv locationInView:self];
     CGFloat x_displace = translation.x - self.boundCenter.x;
     CGFloat y_displace = -1.0*(translation.y - self.boundCenter.y);

@@ -39,4 +39,11 @@
 /// value 变化时的回调
 @property (strong, nonatomic) void(^progressChange)(YHLCircleSlider *circleView, int currentNum);
 
+/**
+ 当滑动滑块抬起手指时要执行的操作
+
+ @param action 要执行的操作
+ */
+- (void)addActionWhenTouchUp:(void(^)(YHLCircleSlider *circleView, int currentNum))action;
+
 @end

@@ -44,8 +44,10 @@
     _otCircleSlider1.progressChange = ^(YHLCircleSlider *circleView, int currentNum) {
         _otSlider.value = currentNum;
         _otCircleSlider2.value = currentNum;
-        _otLabel.text = [NSString stringWithFormat:@"%d", currentNum];
     };
+    [_otCircleSlider1 addActionWhenTouchUp:^(YHLCircleSlider *circleView, int currentNum) {
+        _otLabel.text = [NSString stringWithFormat:@"%d", currentNum];
+    }];
 }
 
 
